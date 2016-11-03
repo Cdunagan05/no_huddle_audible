@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:create, :destroy]
   resources :home, only: [:show]
+  resources :chatroom, only: [:show]
+  resources :messages, only: [:create]
 
   root to: "home#show"
 end
