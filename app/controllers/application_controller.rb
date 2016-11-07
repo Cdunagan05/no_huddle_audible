@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+  http_basic_authenticate_with username: , password: 
+
   helper_method :current_user
 
   def current_user
