@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  http_basic_authenticate_with username: , password: 
+  http_basic_authenticate_with username: ENV['USERNAME'], password: ENV['PASSWORD'] 
 
   helper_method :current_user
 

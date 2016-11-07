@@ -2,6 +2,7 @@ class SportsFeedService
 
   def self.schedule(season)
     response = conn.get "/feed/pull/nfl/#{season}/full_game_schedule.json"
+    byebug
     JSON.parse(response.body)
   end
 
